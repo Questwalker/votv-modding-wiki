@@ -10,20 +10,15 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Voices of the Void Modding Wiki',
+  tagline: 'Adding More Voices to your Void.',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://questwalker.github.io/',
   baseUrl: '/votv-modding-wiki/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Questwalker', // Usually your GitHub org/user name.
-  projectName: 'votv-modding-wiki', // Usually your repo name.
+  organizationName: 'Questwalker',
+  projectName: 'votv-modding-wiki',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -43,10 +38,9 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/Questwalker/votv-modding-wiki/tree/main/', // TODO: Decide if we want easy editing links
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -59,22 +53,22 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/docusaurus-social-card.jpg', // TODO
       navbar: {
-        title: 'My Site',
+        title: 'VotV Modding Wiki',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'VotV Logo',
+          src: 'img/logo.svg', // TODO
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'docsSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Questwalker/votv-modding-wiki',
             label: 'GitHub',
             position: 'right',
           },
@@ -87,7 +81,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Tutorial', // TODO: Change when docs are filled in. Point towards "Welcome", "Installing Mods", and "Creating Mods" sections
                 to: '/docs/intro',
               },
             ],
@@ -96,30 +90,30 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discordapp.com/invite/eternitydevgames',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Reddit',
+                href: 'https://www.reddit.com/r/Voicesofthevoid/',
               },
             ],
           },
           {
-            title: 'Other Wikis',
+            title: 'More',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'VotV Wiki',
+                href: 'https://voicesofthevoid.wiki.gg/',
+              },
+              {
+                label: 'Interactive Map',
+                href: 'https://questwalker.github.io/votv-map/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Wiki by Questwalker (@questwalker) on Discord, based on the wiki by GatoDeveloper/Creepycats.`,
       },
       prism: {
         theme: prismThemes.github,
