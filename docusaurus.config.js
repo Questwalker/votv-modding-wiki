@@ -126,12 +126,8 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Other Wikis',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/facebook/docusaurus',
