@@ -1,0 +1,31 @@
+---
+id: publishing-your-mod
+sidebar_position: 2
+description: ==========
+---
+
+# Packaging Your Mod
+
+:::note Dr. Dee's Note
+This page is meant for individuals who have finished their mods and intend on uploading their mod to <ins>Thunderstore</ins>. If you do not intend to make mods or have not yet learned or finished your mod, please look at the other tutorials.
+:::
+
+VotV mods are packaged to work with Thunderstore, as it allows streamlined mod installation as well as cross-version support. Thunderstore mods for VotV use the UnrealShimloader package format.
+
+```
+📁 MOD_AUTHOR-MOD_NAME-#.#.#.zip
+    📄 manifest.json
+    📄 README.md
+    🖼️ icon.png
+    📁 mod
+        📄 enabled.txt
+        📁 scripts
+            📄 main.lua
+        📁 dll
+            📄 main.dll
+    📁 pak
+        📄 MOD_NAME.pak
+    📁 cfg
+        📄 MOD_AUTHOR-MOD_NAME-cfg.json
+```
+
