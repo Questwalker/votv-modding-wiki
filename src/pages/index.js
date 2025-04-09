@@ -34,8 +34,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Home | ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`Home`}
+      description="The Community Modding Wiki for Voices of the Void">
       <HomepageHeader />
       {/* <main>
         <HomepageFeatures />

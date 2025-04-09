@@ -79,11 +79,9 @@ h1 {
 } */
 
 .hero {
-  /* flex: 1;
+  flex: 1;
   padding-bottom: 170px !important;
-  padding-top: 170px !important */
-  padding-bottom: 200px !important;
-  padding-top: 200px !important
+  padding-top: 170px !important
 }
 
 .hero__background {
