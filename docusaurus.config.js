@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Voices of the Void Modding Wiki',
-  tagline: 'Adding More Voices to your Void.',
+  tagline: 'Adding more Voices to your Void.',
   favicon: 'img/favicon.ico',
 
   url: 'https://questwalker.github.io/',
@@ -58,7 +58,7 @@ const config = {
         title: 'VotV Modding Wiki',
         logo: {
           alt: 'VotV Logo',
-          src: 'img/logo.svg', // TODO
+          src: 'img/votv.png',
         },
         items: [
           {
@@ -105,6 +105,10 @@ const config = {
               {
                 label: 'VotV Wiki',
                 href: 'https://voicesofthevoid.wiki.gg/',
+              },
+              {
+                label: 'VotV Webite',
+                href: 'https://votv.dev/',
               },
               {
                 label: 'Interactive Map',
