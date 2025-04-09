@@ -41,6 +41,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   'https://github.com/Questwalker/votv-modding-wiki/tree/main/', // TODO: Decide if we want easy editing links
+          sidebarCollapsed: false
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -82,7 +83,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial', // TODO: Change when docs are filled in. Point towards "Welcome", "Installing Mods", and "Creating Mods" sections
-                to: '/docs/intro',
+                to: '/docs/welcome',
               },
             ],
           },

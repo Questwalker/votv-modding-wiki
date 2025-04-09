@@ -1,0 +1,19 @@
+---
+title: Welcome!
+sidebar_position: 1
+tags: [Getting Started]
+description: Getting started on the VotV modding wiki
+---
+
+# Welcome to the VotV Modding Wiki!
+
+Welcome! This wiki will explain the basics of:
+
+- Installing Mods via ThunderStore/R2Modman (RECOMMENDED)
+- Installing Mods Manually
+- Creating Your First Mod
+- Troubleshooting
+
+You can click on a Link to jump to the related documentation page.
+
+This documentation is maintained by Questwalker (@questwalker on Discord), report any issues in the EternityDev Discord.

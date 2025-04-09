@@ -113,12 +113,12 @@ h1 {
   text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000
 }
 
-/* blockquote {
+blockquote {
   background-color: #ffffff11;
   border-left-width: 4px;
   border-radius: 16px;
   padding: 16px
-} */
+}
 
 /* .iconEdit_Z9Sw {
   margin-right: .3em;
