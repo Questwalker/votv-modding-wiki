@@ -3,7 +3,7 @@ A wiki for modding the game [Voices of the Void](https://mrdrnose.itch.io/votv) 
 
 This wiki is heavily based on the original [VotV modding wiki](https://modding.ariral.space/), written by Gato/creepycats. Unfortunately, the source files for that wiki became unavailable, which made editing or contributing to the wiki impossible. This is what eventually necessitated the creation of this wiki.
 
-This project is a work of my own and is unofficial.
+**This project is a work of my own and is unofficial.**
 
 ## Contributing
 Any form of contributing is welcomed and greatly appreciated!

@@ -1,7 +1,7 @@
 ---
 id: terminal-commands
 sidebar_position: 6
-description: ==========
+description: How to implement custom console commands using the VoidMod framework
 ---
 
 # Adding Terminal Commands
@@ -26,16 +26,16 @@ Please note that you cannot overwrite base game commands. You can try deleting t
 This allows you to write any text you want as a line to the in-game Terminal Console. You can use the following color format codes for this:
 
 - `White (default)`
-- `<c>Cyan</>`
-- `<y>Yellow</>`
-- `<g>Green</>`
-- `<r>Red</>`
+- <code style={{color: 'cyan'}}>&lt;c&gt;Cyan&lt;/&gt;</code>
+- <code style={{color: 'yellow'}}>&lt;y&gt;Yellow&lt;/&gt;</code>
+- <code style={{color: 'lime'}}>&lt;g&gt;Green&lt;/&gt;</code>
+- <code style={{color: 'red'}}>&lt;r&gt;Red&lt;/&gt;</code>
 
 ## Delete Last Line
 
 ![](img/terminal/deletelastline.png)
 
-This node is used to delete the last sent line in the terminal, and is useful when creating custom commands, as it allows the Mod Creator to remove the `> err` that shows up by default when invalid commands are received and replace it with their own output.
+This node is used to delete the last sent line in the terminal, and is useful when creating custom commands, as it allows the Mod Creator to remove the <code style={{color: 'red'}}>&gt; err</code> that shows up by default when invalid commands are received and replace it with their own output.
 
 ## Hooking The Terminal Command Handler
 

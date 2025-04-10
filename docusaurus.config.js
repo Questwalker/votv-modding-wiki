@@ -38,9 +38,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/Questwalker/votv-modding-wiki/tree/main/', // TODO: Decide if we want easy editing links
+          editUrl: 'https://github.com/Questwalker/votv-modding-wiki/tree/main/',
           sidebarCollapsed: false
         },
         theme: {
