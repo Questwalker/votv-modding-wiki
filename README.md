@@ -1,17 +1,18 @@
 # VotV Modding Wiki
 A wiki for modding the game [Voices of the Void](https://mrdrnose.itch.io/votv) by [MrDrNose](https://mrdrnose.itch.io/), built using [Docusaurus](https://docusaurus.io/).
 
-This wiki is heavily based on the [original modding wiki](https://modding.ariral.space/), hosted by Gato/creepycats. Unfortunately, the source files for that wiki were lost, which made editing or contributing to the wiki impossible. This is what eventually necessitated the creation of this wiki.\
+This wiki is heavily based on the original [VotV modding wiki](https://modding.ariral.space/), written by Gato/creepycats. Unfortunately, the source files for that wiki became unavailable, which made editing or contributing to the wiki impossible. This is what eventually necessitated the creation of this wiki.
+
 This project is a work of my own and is unofficial.
 
 ## Contributing
 Any form of contributing is welcomed and greatly appreciated!
 
-🥉 For smaller recommendations or those without experience writing, helpers can also help suggest changes or tweaks through the contact methods provided below.
+🥉 For smaller recommendations or those without experience writing, helpers can also help suggest changes or tweaks through the contact methods provided [below](#contact).
 
-🥈 For less technically-experienced writers, contributors can write their own pages or test out writing different things using any markdown editor [like this one](https://markdownlivepreview.com/). Any finished pages you've written can be DM'ed or written to me using my discord or email provided below.
+🥈 For less technically-experienced writers, contributors can write their own pages or test out writing different things using any markdown editor [like this one](https://markdownlivepreview.com/). Any finished pages you've written can be DM'ed or written to me using my discord or email provided [below](#contact).
 
-🥇 For more technically experienced users, I would recommend running the wiki locally, and submitting their edits through pull requests.
+🥇 For more technically experienced users, I would recommend [running the wiki locally](#running-locally), and submitting their edits through pull requests.
 
 Feel free to contact me even if you're not as sure about your suggestion! Contact me even if you just want to bounce ideas off of me!
 
