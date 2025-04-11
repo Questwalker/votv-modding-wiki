@@ -5,23 +5,19 @@ description: How to create and register custom variables with the VoidMod framew
 ---
 
 # Custom Save Data
-
 If you want to save and load data to a player's save file, such as custom stats or event requirements, then you can use VoidMod's Save Data functions. Here are the different Nodes you can use to store or load save data information.
 
 ## VoidMod CustomVariable
-
 ![](img/save-data/customvariable.png)
 
 This is the structure of the VoidMod Save Data variables and is used when saving and loading information based on ID. It has one of each common data types attached to it and can hold multiple values under the same ID as long as the data type of the value is different.
 
 ## Set Custom Save Variable
-
 ![](img/save-data/setcustomsavevariable.png)
 
 This node takes in the Custom Variable structure and adds it to a cached array of loaded variables.
 
 ## Get Custom Save Variable
-
 ![](img/save-data/getcustomsavevariable.png)
 
 This node takes in the Variable ID from the Custom Variable Struct and returns the cached Structure as well as a bool indicating whether the structure was found.

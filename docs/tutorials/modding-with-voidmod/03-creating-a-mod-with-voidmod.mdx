@@ -5,9 +5,7 @@ description: How to create your mod and register it using the VoidMod framework
 ---
 
 # Creating Your First Mod
-
 ## Creating the ModActor
-
 First, open the "Mods" folder in your Unreal Engine Content Browser. This is where your mods will be stored. Right Click an Empty Area and click "New Folder", making sure you name the folder after your mod.
 
 For example, if I wanted to create a mod called "Gato's Cool Mod", I would name this folder `GatosCoolMod`. When you build and export your project, this will be the name of the `.pak` file you provide the Mod Loader with. Simplicity is key, but you can't name your Mod the same as another Mod, so I recommend personalizing your mod folder names.
@@ -25,7 +23,6 @@ Name this new Actor "ModActor". This will be your Mod's heart, its controller. D
 ![](img/clickeventgraph.png)
 
 ## Registering your Mod
-
 In VoidMod1, you would have to create a "Event PostBeginPlay" node and register your mod there. VoidMod2 does this for you and simplifies the work you have to do by including premade functions for all VoidMod mods through its parent class. If you are moving your VoidMod mod to VoidMod2, do all of your initializing functions using the following:
 
 To start registering your mod, go to the Left side of the window for the Blueprint Editor, and hover over the "Functions" dropdown. Click on the "Override" dropdown that appears, and select "Initialize Mod".

@@ -5,13 +5,11 @@ description: How to implement custom console commands using the VoidMod framewor
 ---
 
 # Adding Terminal Commands
-
 :::warning
 Please note that you cannot overwrite base game commands. You can try deleting their output, but their effects will still apply.
 :::
 
 ## Write Console Line
-
 ![](img/terminal/writeconsoleline.png)
 
 This allows you to write any text you want as a line to the in-game Terminal Console. You can use the following color format codes for this:
@@ -23,13 +21,11 @@ This allows you to write any text you want as a line to the in-game Terminal Con
 - <code style={{color: 'red'}}>&lt;r&gt;Red&lt;/&gt;</code>
 
 ## Delete Last Line
-
 ![](img/terminal/deletelastline.png)
 
 This node is used to delete the last sent line in the terminal, and is useful when creating custom commands, as it allows the Mod Creator to remove the <code style={{color: 'red'}}>&gt; err</code> that shows up by default when invalid commands are received and replace it with their own output.
 
 ## Hooking The Terminal Command Handler
-
 To listen for when commands are sent, you have to attach an Event to the Terminal Command Handler from the VoidMod Instance. Simply make a "Get VoidMod Instance" node, and drag another node off of the output to "Bind Event to On Terminal Command". Then, drag the Event input off and choose `Event Dispatchers > Create Event`. From the dropdown, select "Create a Matching Function" (or event).
 
 :::warning

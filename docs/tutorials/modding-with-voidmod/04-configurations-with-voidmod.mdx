@@ -5,7 +5,6 @@ description: How to create and register config variables with the VoidMod framew
 ---
 
 # Mod Configuration Options
-
 If you want to allow users to configure certain aspects of your mod, you can use VoidMod's Config functions. Here are the different Nodes you can use to store or load configuration options.
 
 :::tip Keep In Mind
@@ -18,7 +17,6 @@ There are currently two settings types that can be registered, Bools and Inputs.
 **[Click This To Skip to an Example Implementation](#tutorial-example)**
 
 ## Set Config Default
-
 ![](img/config-settings/setconfigdefault.png)
 
 This node is used to set the default value of a configuration variable. If a value exists already, then this node will do nothing, otherwise it will write the value to this variable.
@@ -26,13 +24,11 @@ This node is used to set the default value of a configuration variable. If a val
 Returns a bool, representative of whether the value exists or was written.
 
 ## Set Config Variable
-
 ![](img/config-settings/setconfigvariable.png)
 
 This node is used to set the current value of a configuration variable. If a value exists already, then this node will overwrite it.
 
 ## Get Config Variable
-
 ![](img/config-settings/getconfigvariable.png)
 
 This node is used to get the current value of a configuration variable. If a value exists, it will return the value as a string, otherwise it returns a false bool.
@@ -52,7 +48,6 @@ Writes loaded variables to the Configuration file.
 :::
 
 ## Telling the Mod About Changes
-
 If you need to update something in real time when a user changes their preferences, you can bind an event to the configuration change dispatcher as shown here:
 
 ![](img/config-settings/configupdate.png)
@@ -60,7 +55,6 @@ If you need to update something in real time when a user changes their preferenc
 This will create an event where you can have the mod update its different variables or functions.
 
 ## Tutorial Example
-
 For my example mod, I want to have a "Silly Mode", where when the mod starts, if it is enabled, silly music will play.
 
 If I want the user to be able to configure this option, I will first set a configuration default when the mod registers, and then check if the bool is enabled so that I can play my music.
