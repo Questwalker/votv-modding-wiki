@@ -5,17 +5,16 @@ description: How to package your mod so that it can be shared on the Thunderstor
 ---
 
 # Publishing To Thunderstore
+VotV mods can be packaged to work with Thunderstore, as it allows streamlined mod installation as well as cross-version support. Thunderstore mods packages use the UnrealShimloader package format.
 
-:::note Dr. Dee's Note
-This page is meant for individuals who have finished their mods and intend on uploading their mod to <ins>Thunderstore</ins>. If you do not intend to make mods or have not yet learned or finished your mod, please look at the other tutorials.
-:::
-
-VotV mods are packaged to work with Thunderstore, as it allows streamlined mod installation as well as cross-version support. Thunderstore mods for VotV use the UnrealShimloader package format.
-
+## Folder Format
+A typical `.zip` file for Thunderstore may look like this. The files `icon.png`, `README.md`, and `manifest.json` are **required**, while all other files and folders are optional.\
+Additionally, if you are including a `.lua` or `.dll` file in your mod, an `enabled.txt` is also required in the mod folder (it can be blank, it just needs to exist).
 ```
-📁 MOD_AUTHOR-MOD_NAME-#.#.#.zip
+🗂️ MOD_AUTHOR-MOD_NAME-#.#.#.zip
     📄 manifest.json
     📄 README.md
+    📄 CHANGELOG.md
     🖼️ icon.png
     📁 mod
         📄 enabled.txt
@@ -28,3 +27,30 @@ VotV mods are packaged to work with Thunderstore, as it allows streamlined mod i
     📁 cfg
         📄 MOD_AUTHOR-MOD_NAME-cfg.json
 ```
+
+## The Manifest
+The `manifest.json` is a file that contains information about your mod to be included on your Thunderstore mod page. The file is a `.json` file that contains the following values:
+
+| Key            | Description                                                                                                  | Example value                                                                                   |
+| -------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
+| name           | Name of the mod page, with no spaces.<br/>Allowed characters: `a-z A-Z 0-9 _`                                | <pre>"Some_Mod"</pre>                                                                           |
+| description    | A short description of the mod, shown on the mod list. Max 250 characters.                                   | <pre>"Hello world"</pre>                                                                        |
+| version_number | Version number of the mod, following the [semantic version format](https://semver.org/) `Major.Minor.Patch`  | <pre>"1.3.2"</pre>                                                                              |
+| dependencies   | List of other packages that are required for this package to function.                                       | <pre>[<br/>    "MythicManiac-TestMod-1.1.0",<br/>    "SomeAuthor-SomePackage-1.0.0"<br/>]</pre> |
+| website_url    | URL of the mod's website (e.g. GitHub repo). Can be an empty string.                                         | <pre>"https:<area/>//example.com/"</pre>                                                        |
+
+For example, a `manifest.json` might look like this:
+```
+{
+    "name": "TestMod",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/thunderstore-io",
+    "description": "This is a description for a mod. 250 characters max",
+    "dependencies": [
+        "MythicManiac-TestMod-1.1.0"
+    ]
+}
+```
+
+You can read more about the manifest format on the [Thunderstore website](https://thunderstore.io/c/voices-of-the-void/create/docs/). 
+

@@ -9,44 +9,37 @@ description: A list of useful tools for modding VotV and Unreal Engine
 # Useful Tools for Modding
 
 ## General Modding
-
 - [RE-UE4SS](https://github.com/UE4SS-RE/RE-UE4SS)
-  - Enables modding for Unreal Engine Games. Check its [Documentation Here](https://docs.ue4ss.com/dev/index.html)
-- [UnrealShimloader](https://thunderstore.io/c/voices-of-the-void/p/Thunderstore/unreal_shimloader/)
-  - A Fork of RE-UE4SS, designed to support Mod Managers and Custom Mod Paths.
+  - Enables modding for Unreal Engine games, and provides many tools for modding and inspecting game functions. Check its [documentation here](https://docs.ue4ss.com/release/).
+- [Unreal Shimloader](https://thunderstore.io/c/voices-of-the-void/p/Thunderstore/unreal_shimloader/)
+  - A fork of RE-UE4SS designed by Thunderstore, designed to support Mod Managers and Custom Mod Paths.
 - [VoidMod](https://thunderstore.io/c/voices-of-the-void/p/Gatohost/VoidMod/)
-  - A Blueprint framework mod, allowing for simple Custom Props, Events, and interacting with the Base Game
-  - You can Download the Development Kit (A .zip archive of Unreal Engine Assets containing the framework and examples) in the [EternityDev Discord](https://discord.gg/invite/eternitydevgames), under the [VoidMod Loader Thread](https://discord.com/channels/512287844258021376/1135662233460949002)
-- [NynrahGhost's VotV_ghostmapping](https://github.com/NynrahGhost/VotV_ghostmapping/releases)
-  - Included with later versions of VoidMod2 development kit with compatibility tweaks.
-  - Incredible resource for creating actors or understanding how certain objects work.
+  - A blueprint framework mod, allowing for simple custom Props, Events, and interacting with the Base game.
+  - You can download the VoidMod Development Kit (A .zip archive of Unreal Engine Assets containing the framework and examples, with ghostmappings included) in the [EternityDev Discord](https://discord.gg/invite/eternitydevgames), under the [VoidMod Loader Thread](https://discord.com/channels/512287844258021376/1135662233460949002).
+- [modestimpala's VotV_ghostmapping](https://github.com/modestimpala/VotV_ghostmapping)
+  - Empty UE4 assets created to mimic VotV's assets, allowing modders to reference VotV's objects in-game.
+  - An incredible resource for creating actors or understanding how certain objects work.
 
 ## Save Slots
-
 - [SaveEditOnline](https://www.saveeditonline.com/)
   - Not perfect, but the best we have until a Save Editor Mod is released. Edits the `.sav` files in `%localappdata%\VotV\Saved\SaveGames`
 
 ## Asset Viewing
-
-:::note Editor's Note - On Datamining Assets
-Please avoid attempting to Datamine new features with intent to distribute secrets. You WILL be banned or have posts deleted. Voices of the Void is a game about discovering the secrets and solving mysteries. Datamining ruins the fun and overall takes away from the experience for everyone.
-
-PLEASE, only use these tools with intent to create 'Ghost References' for your Mods. I'd hate to see you ruin Nose's incredible game
+:::note Editor's Note on Datamining Assets
+<u>Do not</u> attempt to datamine the game with the intent to discover and spoil secrets. You **WILL** be banned and have your posts deleted. Voices of the Void is a game about discovering the secrets and solving mysteries. Datamining takes away from the fun and ruins the experience for everyone, including the developers.
 :::
 
 - [FModel](https://fmodel.app/)
-  - Your best friend for Modding. Generates JSON summaries of assets' functions, variables, components, and allows you to export most assets.
+  - Your best friend for Modding. Generates the raw JSON of assets' functions, variables, components, and allows you to view and export most assets.
 - [Kismet Analyzer](https://github.com/trumank/kismet-analyzer)
-  - Basically takes the JSON summaries that FModel creates and attempts to construct a graph. Useful for reversing Blueprints.
+  - Can take JSON summaries that FModel creates and attempts to construct a rudimentary graph. Useful for reversing Blueprints.
 - [UModel/UE Viewer](https://www.gildor.org/en/projects/umodel)
   - Though mostly obsolete compared to the other tools, UModel allows you to extract certain Textures, Sounds, and Models.
 - [Stove](https://github.com/bananaturtlesandwich/stove)
-  - Apparently a tool designed to view cooked Unreal Engine scenes. Have yet to test this with Voices of the Void.
+  - A tool designed to view cooked Unreal Engine maps. Can be used with VotV with relative success.
 
 ## Blender
-
 - [Blender](https://www.blender.org/)
-  - Blender is a common 3D-Modeling and Rendering Program
-- [PSK/PSA Importer](https://github.com/DarklightGames/io_scene_psk_psa)
-  - Useful Plugin for Blender to help with importing certain assets
-
+  - Blender is a common 3D-Modeling and Rendering Program.
+- [PSK/PSA Importer](https://extensions.blender.org/add-ons/io-scene-psk-psa/) ([github](https://github.com/DarklightGames/io_scene_psk_psa))
+  - A useful Plugin for Blender to help with importing assets exported through FModel.
