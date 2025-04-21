@@ -39,7 +39,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/Questwalker/votv-modding-wiki/tree/main/',
-          sidebarCollapsed: false
+          // sidebarCollapsed: false
         },
         theme: {
           customCss: './src/css/custom.css',
