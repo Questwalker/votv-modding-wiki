@@ -1,0 +1,113 @@
+---
+id: setting-up-unreal
+sidebar_position: 1
+description: How to install and setup Unreal Engine so that you can begin modding
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Setting up Unreal Engine
+
+## Installing Unreal Engine 4.27.2
+Voices of the Void was built on [Unreal Engine 4.27.2](https://www.unrealengine.com/en-US/download), so in order to create mods, you will need to install it using the Epic Games Launcher. Make sure you choose to install 4.27.2, but any 4.27.X version is likely to work just as well.
+
+Be warned that installing the Engine will require around 40-45 gigabytes of storage space.
+
+![](img/setup-unreal/unrealengine-install.png)
+
+After installing Unreal Engine, click Launch.
+
+## Preparing the Mod Project
+After launching Unreal Engine, you want to create a new project. You'll be greeted by a "Select or Create New Project" window, where you want to select "Games", and click next.
+
+![](img/setup-unreal/unrealengine-newproject.png)
+
+Select Blank, and then Copy the settings you see in the following image:
+
+![](img/setup-unreal/unrealengine-projectsetup.png)
+
+Let Unreal Engine create your project, then close out so you can install VictoryBPLibrary.
+
+## Configuring editor and project settings
+We will need to change a couple settings to setup our project for modding.
+
+Inside your project, click "edit" on the menu bar, and open both the "Editor Preferences" and "Project Settings" menu.
+
+### Editor Preferences
+Enable the checkbox "Allow ChunkID Assignments"
+
+### Project Settings
+Enable the checkbox "Generate Chunks"\
+Disable the checkbox "Share Material Shader Code"
+
+![](img/setup-unreal/unreal-edit.png)
+
+## Installing VictoryBPLibrary
+:::warning
+Make sure your Unreal Engine project is closed while making these changes.
+:::
+VictoryBPLibrary is a plugin that provides over a hundred useful different nodes to the blueprint editor, and it is used by many modders and the developers of VotV due to its utility, so it is heavily recommended.
+
+<Tabs groupId="installing-victorybp">
+<TabItem value="local-install" label="Installing to a Project" default>
+First, download the `VictoryPlugin27.zip` from [here](https://www.mediafire.com/file/1snjjuxuoqs6b4g/VictoryPlugin27.zip/file).
+
+You'll want to extract the ZIP file to `VotV/Plugins/VictoryBPLibrary`
+
+```
+📁 VotV
+    📄 VotV.uproject
+    📁 Plugins *
+        📁 VictoryBPLibrary *
+            📄 Zip Contents Go Here...
+    📁 Config
+    📁 Content
+
+* - Make This Folder Yourself
+```
+
+Afterwards, open your project file in Unreal Engine, and Enable Victory Plugin.
+
+Use the following image as a guide:
+
+![](img/setup-unreal/victorybp-enable.png)
+</TabItem>
+<TabItem value="global-install" label="Installing Globally">
+VictoryBPLibrary can also be installed globally, so that it becomes available in every project you create.
+
+First, download the `VictoryPlugin27.zip` from [here](https://www.mediafire.com/file/1snjjuxuoqs6b4g/VictoryPlugin27.zip/file).
+
+Find the location of your Unreal Engine installation, You'll want to extract the ZIP file to `UE_4.27/Engine/Plugins/Marketplace/VictoryBPLibrary`
+
+```
+📁 Marketplace
+    📁 VictoryBPLibrary *
+        📄 VictoryBPLibrary.uplugin
+        📁 Binaries
+        📁 Intermediate
+        📁 Resources
+        📁 Source
+
+* - Make This Folder Yourself
+```
+
+Now, open any project file in Unreal Engine, the Victory Plugin should be available in the plugins menu.
+
+Additionally, if you want the plugin *enabled* by default in every project you create or use, you can open the `VictoryBPLibrary.uplugin` file in a text editor and add `"EnabledByDefault": true,`
+
+For example:
+```diff
+    ...
+    "CreatedByURL": "http://www.ue4code.com",
+    "DocsURL": "http://www.ue4code.com",
+    "MarketplaceURL": "http://www.ue4code.com",
+    "SupportURL": "http://www.ue4code.com",
+    "EngineVersion": "4.27.0",
+    "CanContainContent": false,
+    "Installed": true,
++   "EnabledByDefault": true,
+    "Modules": [
+    ...
+```
+</TabItem>
+</Tabs>
