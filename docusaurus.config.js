@@ -29,6 +29,13 @@ const config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        htmlLang: 'en-GB',
+        path: 'en',
+      },
+    },
   },
 
   presets: [
@@ -65,6 +72,10 @@ const config = {
             sidebarId: 'docsSidebar',
             position: 'left',
             label: 'Documentation',
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
           {
             href: 'https://github.com/Questwalker/votv-modding-wiki',
