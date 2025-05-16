@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 ## Installing Unreal Engine 4.27.2
 Voices of the Void was built on [Unreal Engine 4.27.2](https://www.unrealengine.com/en-US/download), so in order to create mods, you will need to install it using the Epic Games Launcher. Make sure you choose to install 4.27.2, but any 4.27.X version is likely to work just as well.
 
-Be warned that installing the Engine will require around 40-45 gigabytes of storage space.
+Be advised that installing the Engine will require around 40-45 gigabytes of storage space.
 
 ![](img/setup-unreal/unrealengine-install.png)
 
@@ -31,14 +31,14 @@ Let Unreal Engine create your project, then close out so you can install Victory
 ## Configuring editor and project settings
 We will need to change a couple settings to setup our project for modding.
 
-Inside your project, click "edit" on the menu bar, and open both the "Editor Preferences" and "Project Settings" menu.
+Inside your project, click "edit" on the menu bar and open both the "Editor Preferences" and "Project Settings" menu.
 
 ### Editor Preferences
-Enable the checkbox "Allow ChunkID Assignments"
+Enable the setting "Allow ChunkID Assignments"
 
 ### Project Settings
-Enable the checkbox "Generate Chunks"\
-Disable the checkbox "Share Material Shader Code"
+Enable the setting "Generate Chunks"\
+Disable the setting "Share Material Shader Code"
 
 ![](img/setup-unreal/unreal-edit.png)
 
@@ -47,6 +47,8 @@ Disable the checkbox "Share Material Shader Code"
 Make sure your Unreal Engine project is closed while making these changes.
 :::
 VictoryBPLibrary is a plugin that provides over a hundred useful different nodes to the blueprint editor, and it is used by many modders and the developers of VotV due to its utility, so it is heavily recommended.
+
+You can chose to install the plugin to a single project, or have it installed globally so that it becomes available in every project you create.
 
 <Tabs groupId="installing-victorybp">
 <TabItem value="local-install" label="Installing to a Project" default>
@@ -73,8 +75,6 @@ Use the following image as a guide:
 ![](img/setup-unreal/victorybp-enable.png)
 </TabItem>
 <TabItem value="global-install" label="Installing Globally">
-VictoryBPLibrary can also be installed globally, so that it becomes available in every project you create.
-
 First, download the `VictoryPlugin27.zip` from [here](https://www.mediafire.com/file/1snjjuxuoqs6b4g/VictoryPlugin27.zip/file).
 
 Find the location of your Unreal Engine installation, You'll want to extract the ZIP file to `UE_4.27/Engine/Plugins/Marketplace/VictoryBPLibrary`
@@ -91,7 +91,7 @@ Find the location of your Unreal Engine installation, You'll want to extract the
 * - Make This Folder Yourself
 ```
 
-Now, open any project file in Unreal Engine, the Victory Plugin should be available in the plugins menu.
+Now, open any project in Unreal Engine, and the Victory Plugin should be available in the plugins menu.
 
 Additionally, if you want the plugin *enabled* by default in every project you create or use, you can open the `VictoryBPLibrary.uplugin` file in a text editor and add `"EnabledByDefault": true,`
 
