@@ -111,3 +111,17 @@ For example:
 ```
 </TabItem>
 </Tabs>
+
+## Fixing Sounds
+Playing sounds does not work out of the box. To fix this, open the folder your Unreal Engine project is in, open the `Config` folder, and open `DefaultEngine.ini` in a text editor. Scroll to the bottom of the file, and insert this text:
+
+```
+[/Script/WindowsTargetPlatform.WindowsTargetSettings]
+MaxSampleRate=0.000000
+HighSampleRate=0.000000
+MedSampleRate=0.000000
+LowSampleRate=0.000000
+MinSampleRate=0.000000
+CompressionQualityModifier=0.000000
+AutoStreamingThreshold=0.000000
+```
