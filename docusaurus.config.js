@@ -121,8 +121,8 @@ const config = {
                 href: 'https://votv.dev/',
               },
               {
-                label: 'Interactive Map',
-                href: 'https://questwalker.github.io/votv-map/',
+                label: 'VotV Archive',
+                href: 'https://archive.ariral.space/',
               },
             ],
           },
