@@ -4,19 +4,21 @@ sidebar_position: 4
 description: How to use ghost mapping in your unreal project
 ---
 
-# Using Ghostmappings
-Unreal Engine allows developers to talk to and use different assets and objects using code or blueprints. For example, a developer can reference the player's playerobject and get their position in the world.
+# Ghostmappings
+In a blueprint, an actor can reference other actors and objects throughout the project, which they can use to get variable values, spawn actors, call functions, listen to events, and more. For example, an actor can reference the player's playerobject and get their position in the world, and spawn another actor if they are in a certain location. This is how Unreal Engine allows developers to add complex interplay between various different actors.
 
-The situation for modders however is different: we don't have the objects from VotV in our projects. So, how do reference things like props, players, and entities when modding? This is where ghost mappings come in.
+The situation for modders however is different: we don't have the objects from VotV in our projects. So, how do reference things like props, players, and entities when modding? This is where ghostmappings come in.
 
-## What are ghostmappings
-Ghostmappings are a collection of empty assets you add to your Unreal project that mimic the original asset files in VotV's project. They exist in the same place as the original asset, and also often include the same variables and functions that are in the original asset. These ghost assets do not have any code and do nothing on their own but allow developers to reference them and their variables in their code.
+## What is a ghostmapping?
+A ghostmapping is an empty asset that is created to mimic the original asset file in VotV's project. It exists in the same place as the original asset, and also often includes the same variables and functions that are in the original asset. These ghost assets do not have any code and do nothing on their own but allow developers to reference them and their variables in their code.
 
 **These ghost assets are not to be included in the packaged mod**. When the packaged mod is loaded into VotV, any code that was previously accessing any ghost assets will instead end up referencing the real assets within the game. This is how modders are able to manipulate VotV's in-game assets and entities.
 
 ## Installing ghostmappings
+Developers can make collections of ghostmappings that can then installed into projects for anyone to use.
+
+Currently, the [ghostmappings by ModestImpala](https://github.com/modestimpala/VotV_ghostmapping) are recommended. They can downloaded by clicking the code button, and clicking "Download Zip". Head into your Unreal Project's folder, and unpack the contents of the `Content` folder into the `Content` folder of your project.
+
 :::warning
 Make sure your Unreal Engine project is closed while making these changes.
 :::
-
-Currently, the [ghostmappings by ModestImpala](https://github.com/modestimpala/VotV_ghostmapping) are recommended. They can downloaded by clicking the code button, and clicking "Download Zip". Head into your Unreal Project's folder, and unpack the contents of the `Content` folder into the `Content` folder of your project.
