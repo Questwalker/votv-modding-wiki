@@ -1,0 +1,34 @@
+---
+id: modifying-datatables
+sidebar_position: 1
+description: How to modify datatables with Fusion
+---
+
+# Modifying Datatables
+Voices of the Void utilizies datatables to store data for multitudes of different things throughout the game, including signals, props, foods, achievements, and even mushrooms. Fusion allows developers to modify these datatables to add new content to the game.
+
+**Currently, Fusion only allows adding new elements to the game's datatables, not removing or editing existing entries.**
+
+:::info IMPORTANT
+You will need VotV's structs to base your datatable on. If you don't have the structs, get them by downloading [ghostmappings](../using-ghostmappings) or by recreating them yourself.
+:::
+
+## Folder setup & explaination
+Inside your mods folder, create this folder path: `_Content/main/datatables`. 
+
+The `_Content` folder acts as the base folder of VotV's project, and is where Fusion will look for datatables to merge. Any datatables in this folder will be merged with their equivalent datatable at the same location. Most of VotV's datatables are stored under the `main/datatables` folder, which is why we then create a main and datatables folder inside. (Since the majority of VotV's datatables are contained in the `datatables` folder, that is where you will be putting the majority of the datatables you create).
+
+:::tip
+Make sure the name of your mod on your mod launcher has the same name as the folder of your mod in your Mods, case sensitive. Otherwise, Fusion may experience issues loading your mod.
+:::
+
+## Creating the datatable
+Now pick a datatable you wish to modify. For the datatable you wish to modify, create a datatable in the folder. Choose the correct struct to base your datatable on, and then give the datatable the same name as the datatable that you are modifying *prefixed with an underscore (`_`).*
+
+For example, if you are attempting to modify the signals (`list_signals`) table, you would create a datatable based on `struct_signal_data1` and name it `_list_signals`.
+
+Now you're done. Create as many entries in that datatable as you want, and when the game runs Fusion will automatically add your entries onto the game's datatables.
+
+## A Small Note
+Some of VotV's datatables work in conjunction with other code in order to work. This means that while most datatables can be easily modified (ex: the signals or props table), other tables may not just automatically work when something is added to it. For example, adding something to the food datatable won't automatically make a prop edible, and adding a keybind to the keybinds datatable won't automatically add a functional keybind to the game's binds menu.
+
