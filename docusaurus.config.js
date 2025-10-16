@@ -21,7 +21,11 @@ const config = {
   projectName: 'votv-modding-wiki',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -59,7 +63,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/background-snow-square.png', // TODO. Shows as website thumbnail
+      image: 'img/background-snow.png', // TODO. Shows as website thumbnail
       navbar: {
         title: 'VotV Modding Wiki',
         logo: {
@@ -135,7 +139,8 @@ const config = {
         additionalLanguages: ['diff'],
       },
       metadata: [
-        {property: 'og:image:height', content: '256'},
+        {property: 'og:image:height', content: '252'},
+        {property: 'og:image:width', content: '448'},
       ],
     }),
 };
