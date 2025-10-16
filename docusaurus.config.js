@@ -139,6 +139,8 @@ const config = {
         additionalLanguages: ['diff'],
       },
       metadata: [
+        {name: 'og:image:height', content: '252'},
+        {name: 'og:image:width', content: '448'},
         {property: 'og:image:height', content: '252'},
         {property: 'og:image:width', content: '448'},
       ],

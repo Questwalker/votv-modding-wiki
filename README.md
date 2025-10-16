@@ -20,7 +20,7 @@ Feel free to contact me even if you're not as sure about your suggestion! Contac
 Docusaurus is designed to be runnable locally with a webserver that updates live to any changes you make to the code. Here are directions for setting-up and launching the wiki on a local computer. These directions are paraphrased from the installation directions found in the [docusaurus documentation](https://docusaurus.io/docs/installation).
 
 ### Requirements:
-- [Node.js](https://nodejs.org/en/download) version 18.0 or above, with npm included
+- [Node.js](https://nodejs.org/en/download) version 22.0 or above, with npm included
 - The downloaded repository. You can download it by:
   - Downloading it as a `.zip` file using the green code button on the GitHub website.
   - Cloning the repository using the `git clone https://github.com/Questwalker/votv-modding-wiki` command.
