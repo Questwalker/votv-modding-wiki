@@ -59,7 +59,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/background-snow.png', // TODO. Shows as website thumbnail
+      image: 'img/background-snow-square.png', // TODO. Shows as website thumbnail
       navbar: {
         title: 'VotV Modding Wiki',
         logo: {
@@ -134,6 +134,9 @@ const config = {
         darkTheme: prismThemes.dracula,
         additionalLanguages: ['diff'],
       },
+      metadata: [
+        {property: 'og:image:height', content: '256'},
+      ],
     }),
 };
 
