@@ -1,0 +1,76 @@
+---
+id: modding-intro
+sidebar_position: 2.5
+description: An intro to getting started modding Unreal Engine games.
+---
+
+# An Intro to Modding
+Welcome to your journey to modding! This wiki is all modding the game Voices of the Void, and to a greater extent, Unreal Engine games in general.
+
+While this wiki will contain info on modding VotV in particular, a lot of the knowledge shared here can be generally applied to any Unreal Engine game. Do you have another fun Unreal game in your Steam library you want to try modding? This wiki may be applicable for it!
+
+## What allows us to mod VotV?
+The tool that allows us to mod VotV is called [RE-UE4SS](https://github.com/UE4SS-RE/RE-UE4SS), also known as the <strong>Unreal Engine 4/5 Scripting System</strong>. This system injects into Unreal Engine games and allows us to insert our own assets and run our own custom blueprints and code. It also provides many tools for dumping data, object inspecting, and more.\
+If you use Thunderstore mods, you may recognize it, as its packed into the "unreal-shimloader" mod.
+
+Generally, UE4SS provides us 3 different ways to create our mods:
+* Using Unreal Engine blueprints
+* Using Lua scripts
+* Using a C++ library
+
+If you are making a mod, you can stick to one of these methods, but you can also use multiple at the same time. For example, a mod may primarily use blueprints, but also uses Lua scripts for some more low-level functions. With some clever programming, you can give these different mods the ability to communicate and share information with each other.
+
+### Other useful documentation
+This wiki may not have everything you need to know on it! You can check out the official [UE4SS documentation](http://docs.ue4ss.com/) for more in-depth information, but be warned, its very rough and incomplete.
+
+Also check out the [Palworld Modding Docs](https://pwmodding.wiki/), they have a lot of in-depth info on modding with specifically the Lua system.
+
+## The different modding methods
+More technical specifics can be found in each respective category's introduction page (click their link!).
+
+### [Blueprints](./blueprint-modding/) (Recommended)
+Blueprints are Unreal Engine's 'visual programming language', a way to program and make complex games without the need to write a single line of code. All assets and blueprints created in the editor get packed into a single `.pak` file which is convenient for moving around.
+
+<u>Pros</u>:
+* Allows you to add your own custom assets and objects to the game.
+* Gives you full access to the Unreal editor. Blueprints, navigation, materials, shaders, marketplace assets, and more!
+* Lots of information and help to be found online.
+
+<u>Cons</u>:
+* Requires installing Unreal Engine.
+* Many blueprint functions and nodes can be considered esoteric or weirdly designed, and the unreal editor is notorious for having weird conventions and unintuitive behaviors.
+* <u>Only blueprints</u>. C++ classes cannot be used to mod.
+* Does not provide more low-level functions that can be used to modify normal gameplay, such as hooking onto function calls.
+
+<u>Notable</u>:
+* Blueprints are (relatively) slow. You may not ever experience problems with its speed, but its important to know that a blueprint running many very expensive operations every frame/tick will noticeably affect FPS.
+* You are limited to whatever plugins the base project was developed with. If you use a nodes plugin or something similar that was not included in the base game, it will crash the game.
+
+### [Lua](./lua-modding/)
+Lua is a lightweight programming language that is used for many modding systems everywhere. For example, the game [Factorio](https://www.factorio.com/) uses lua for its built-in modding system.
+
+<u>Pros</u>:
+* Almost no setup or preparation is required
+* Allows access to lower-level UE4SS functions, including hooking onto function calls and listening for custom events (This can be used to communicate between blueprints and Lua!).
+* Scripting may be more comfortable and smoother than using Blueprints for some people.
+* UE4SS's documentation has lists of the functions and classes that it gives you access to.
+* You can instantly reload your scripts with UE4SS's console without having to restart the game, allowing for ultra fast development!
+
+<u>Cons</u>:
+* Primarily useful for reading or manipulating the game, but not for adding new content.
+* Although you can listen to function calls, its often not possible to directly interfere or intercept them.
+
+### [C++](./cpp-modding/)
+C++ is as powerful and fast as you can get. C++ is one of the oldest and commonly used programming languages for extreme speeds and low level functionality.
+
+**'C++ Mods' are not related to the C++ classes you can create in the Unreal Editor. As far as I know, there is no easy or supported way to use custom unreal C++ classes in modding.**
+
+<u>Pros</u>:
+* Very fast.
+* About as low-level as you can get and provides modders with abilities that other modding methods cannot. C++ allows you to hook onto functions, interfere with their operations, modify parameters before they pass through, and more.
+* UE4SS has a built-in dumper that can generate C++ headers for every blueprint in the game and the base engine classes.
+
+<u>Cons</u>:
+* Requires a lot of setup, and will require you to have a Github and an Epic Forums account to join the EpicGames Github Organization.
+* Your mod will only be compatible with the specific version of UE4SS that your mod was built with.
+* UE4SS's documentation is lacking, most of your learning will come from reading their examples or implementations of the classes.

@@ -8,7 +8,7 @@ This wiki is heavily based on the original [VotV modding wiki](https://modding.a
 ## Contributing
 Any form of contributing is welcomed and greatly appreciated!
 
-🥉 For smaller recommendations or those without experience writing, helpers can also help suggest changes or tweaks through direct message, email, or any of the contact methods provided [below](#contact).
+🥉 For smaller recommendations or those without experience writing, helpers can help suggest changes or tweaks through direct message, email, or any of the contact methods provided [below](#contact).
 
 🥈 For less technically-experienced writers, contributors can write their own pages or test out writing different things using any markdown editor [like this one](https://markdownlivepreview.com/). Any finished pages you've written can be sent to me using my discord or email provided [below](#contact).
 
