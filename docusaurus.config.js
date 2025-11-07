@@ -126,12 +126,12 @@ const config = {
               },
               {
                 label: 'VotV Archive',
-                href: 'https://archive.ariral.space/',
+                href: 'https://archive.votv.zip/',
               },
             ],
           },
         ],
-        copyright: `Wiki by Questwalker (@questwalker) on Discord, based on the wiki by GatoDeveloper/Creepycats.`,
+        copyright: `Wiki built and maintained by Questwalker (@questwalker) on Discord.`,
       },
       prism: {
         theme: prismThemes.github,
