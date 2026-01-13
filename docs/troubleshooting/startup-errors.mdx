@@ -1,0 +1,56 @@
+---
+id: startup-errors
+sidebar_label: Startup errors when playing with mods
+description: How to solve issues relating to crashes when launching the game with mods installed
+---
+
+# Errors or crashing when launching the game with mods installed
+When attempting to run mods for the first time, the game may crash and show error messages when launching the game. Here is a couple easy steps to help troubleshoot what the error could be. If you are still having issues after following this guide, feel free to ask for help in the votv-modding channel of the official discord!
+
+## 0. Make sure you're on a version that allows mods. (regarding 0.9.0)
+Some specific versions of VotV have errors or crash when using mods. All recent releases of 0.9.0 have all come shipped with an anti-cheat system built-in that immediately crashes the game when it detects mods or the modloader is installed, so these versions cannot be played with mods.\
+If you've installed mods on an install of 0.9.0, then the install may be bricked and cannot be ran vanilla anymore. To fix this, follow the directions in the following popup:
+<details>
+<summary>Directions to un-brick 0.9.0 installs</summary>
+
+Installing mods onto VotV adds a couple files to the game's folder, notably `dwmapi.dll` and `UE4SS.dll`, which will still remain even if you don't run any other mods. To fix an install of 0.9.0, delete those two files from `\VotV\Binaries\Win64` folder.
+</details>
+
+## 1. Quickly double check to make sure you haven't missed any directions
+It's good to double-check, so make sure you've followed all the directions in the installation guides ([Mod Manager](../installing-mods/install-modman)/[Manual Install](../installing-mods/install-linux)) and have not missed any steps or important notes.
+
+## 2. Check that the modloader/shimloader is working
+To start hunting down the issue, disable all mods except the shimloader, then click 'start modded'.
+- If the game starts up and runs, then that means the shimloader is working and there is an issue with an installed mod, move on to step [2.1](#21-mod-crashes). 
+- If the game still crashes or fails, that means there is an issue with the shimloader, move on to step [3](#3-shimloader-crashes).
+
+### 2.1. Mod crashes
+If you've verified that the shimloader works, but the game still crashes when you enable/installed all the mods you've wanted to play, then that indicates that there may be an issue with a mod(s) you've installed.
+
+There are multiple different ways to find out what mod is causing the issue. You can check how old the mod is, where the older the mod the more likely it is to be broken, and you can search the Discord with certain mod names to find out if they are broken. For an alternative method, then you can try to [binary search](https://en.wikipedia.org/wiki/Binary_search) through your installed mods enabling only certain groups (usually half) at a time until you hunt down the problem mods.
+
+## 3. Shimloader crashes
+There are 3 common reasons that the shimloader will cause the game to crash
+- [Antivirus issues](#31-antivirus-issues)
+- [Non-latin path issues](#32-non-latin-path-issues)
+- [Permissions issues](#33-permissions-issues)
+
+### 3.1 Antivirus issues
+The shimloader is a program that injects into VotV and manipulates and tampers with the process, which often causes many antiviruses to falsely block or quarantine the file. If you have an antivirus, open it and check its dashboard or protection history to make sure it hasn't accidentally quarantined the file. The name of the shimloader's file is `dwmapi.dll`.\
+If you are concerned about security or the validity of the file, you can check out the source code of it [here](https://github.com/thunderstore-io/unreal-shimloader).
+
+### 3.2 Non-latin path issues
+The shimloader can have issues with any characters that are not [latin characters](https://en.wikipedia.org/wiki/Latin_alphabet) (characters that are not in the english alphabet). If the name of your user account, or any of the folders that the game files are inside have non-latin characters, that may be causing the issues. Try moving the files to a location where none of the folders have non-latin characters and attempt to launch the game again like in [step 2](#2-check-that-the-modloadershimloader-is-working) (make sure to change your game folder location in your mod launcher!).
+
+### 3.3 Permissions issues
+The shimloader can have issues if it is placed or is trying to access files in a place that it may not have permission to work in. This includes putting the mods or the game inside OneDrive, an external drive, or somewhere in a system folder.
+
+To test if this is the issue, try moving everything to a place that the shimloader should be able to work in (and a place that is not controlled by OneDrive) like the Downloads folder, and attempt to launch the game again like in [step 2](#2-check-that-the-modloadershimloader-is-working) (make sure to change your game folder location in your mod launcher!).
+
+## If nothing else works
+If none of the solutions here helped narrow down the problem you're having, you can go to the votv-modding channel in the official discord server and ask for questions there, where someone may be able to help. You may also be able to find help on places like the unofficial subreddit.
+
+To make it easier for the people helping you, please provide the name of your operating system, the version of VotV that you are trying to play on, and your modlist (a screenshot of it works!) so that any helpers can more quickly narrow down the issue. If the error you are experiencing is especially hard to find out, you may be asked to provide [your `UE4SS.log`](./getting-ue4ss-log) too.
+
+## Fake error
+If you see your mod launcher show an error message, but the game still launches and runs correctly with mods working, then its okay to ignore the error message. The message popping up is a mistake.
