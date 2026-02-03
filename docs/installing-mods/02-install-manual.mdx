@@ -62,12 +62,7 @@ Keybinds : 1
 Ensure that `BPModLoaderMod` is set to `1`, just like in the above example.
 
 ## Installing Mods
-Voices of the Void Modding generally requires Two Mods to function properly:
-
-- [Unreal Shimloader (By Thunderstore)](https://thunderstore.io/c/voices-of-the-void/p/Thunderstore/unreal_shimloader/) : This mod is a specialized version of [RE-UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) meant to allow Mod Managers to load mods for Unreal Engine Games. **By this point, you've already installed Shimloader/UE4SS.**
-- [VoidMod (By Gato)](https://thunderstore.io/c/voices-of-the-void/p/Gatohost/VoidMod/) : This mod used by many Voices of the Void mods. It is highly recommended as most mods require it as a dependency. This wiki also has tutorials for creating mods with VoidMod.
-
-To install a Mod, go to [Thunderstore's Website, Specificaly the Voices of the Void Category](https://thunderstore.io/c/voices-of-the-void/).
+To install a Mod, go to [Thunderstore's website, specifically the Voices of the Void category](https://thunderstore.io/c/voices-of-the-void/).
 
 Find any mod you want to download and open it in a new tab. You'll be presented with a page similar to this:
 
@@ -85,7 +80,7 @@ Make sure you install Dependencies, which are listed below the Download buttons.
 
 Once you've downloaded your mods, you will be greeted with a ton of archive files to be extracted.
 
-Mods created after `February 28th, 2024`, downloaded from Thunderstore, most likely use the following new format:
+Mods downloaded from Thunderstore use the following format:
 
 ```
 📁 MOD_AUTHOR-MOD_NAME-#.#.#.zip
@@ -108,18 +103,3 @@ To install this type of mod:
 
 - Put `.pak` Files from `/pak/` into `/Game/VotV/Content/Paks/LogicMods/`
 - Put the `mod` Directory into `/Game/VotV/Binaries/Win64/Mods/`. Rename it to the name of the mod.
-
-:::note Editor's Note
-VotV modding is primarily Blueprint based, so I have not experimented with the `mod` directory. Please correct me through Discord (creepycats) if you believe I have messed up.
-:::
-
-<blockquote>
-Installing Older Mods
-
-Out of Date Mods will instead generally come with a `VotV` folder in the zip. These mods are not compatible with Mod Managers.
-
-To install the old format mods (*HIGHLY* Recommended you do not install these):
-
-- Drag the `VotV` Directory into your `/Game/` path. This should place the needed mod files where they need to go, combining with the already existing `/Game/VotV/` path.
-</blockquote>
-
