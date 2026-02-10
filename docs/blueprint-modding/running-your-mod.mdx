@@ -1,0 +1,40 @@
+---
+id: running-your-mod
+sidebar_position: 10
+description: How to run your mod for testing
+---
+
+# Running your mod
+To load your `.pak` files in VotV for testing, you will need to place it into a specific folder so that the modloader can load it. The following are directions for loading `.pak` files on mod managers and manual installations.
+
+## Placing your pak in a mod manager
+Go into your mod manager's settings, and search for the button "Browse Profile Folder". This will open a folder in your explorer, and from there navigate into the `shimloader` folder, and into the `pak` folder. From here, you can place your pak file, or you can create a folder and place your pak file inside there.
+
+Then follow the [next step.](#renaming-your-pak-file)
+
+## Placing your pak in a manual installation
+To run a pak file on a manual installation, place your file within `\VotV\Content\Paks\LogicMods` directory.\
+You can also create a folder and place your pak file inside that LogicMods folder for some more organization, but heed the warning below.
+
+:::info Note about a bug with UE4SS's modloader (not shimloader)
+If you are using the latest *stable* release of UE4SS v3.0.1, be aware there is a bug in the blueprint modloader's code that prevents it from loading mods contained within folders inside the LogicMods directory. This bug is fixed on the latest experimental release and on the shimloader fork.
+:::
+
+Then follow the [next step.](#renaming-your-pak-file)
+
+## Renaming your pak file
+Once you have placed your pak file, you will need to rename it to whatever you've named the folder your ModActor is in in Unreal Engine. For example, if your ModActor is in a folder called `ExampleMod`, then you will need to name your file `ExampleMod.pak`.\
+If the name does not match up, then the modloader will not load your pak file.
+
+Now, if you've done everything correct, when you start up your game, your mod should be loaded into the game.
+
+## Automating the process
+Repeatedly copy+pasting the file and renaming it every time you want to test it can become very annoying and repetitive, so I recommend making a small batch file or script that simply helps copy and rename the file automatically for convenience.
+
+For example, a batch file on Windows would have a single command that would look like this:
+
+```
+cp "<patch to your unreal engine's output>/pakchunk##-WindowsNoEditor.pak" "<path to your mod folder>\ExampleMod.pak"
+```
+
+Running this file will copy the file over and rename it, rewriting the old pak file while its at it.
