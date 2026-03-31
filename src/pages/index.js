@@ -17,11 +17,16 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
+        <div className={styles.buttons} style={{gap: '12px'}}>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/installing-mods">
+            Learn to install Mods Here
+          </Link>
           <Link
             className="button button--secondary button--lg"
             to="/docs/welcome">
-            Get Started Here
+            Get Started Modding Here
           </Link>
         </div>
       </div>

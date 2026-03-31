@@ -8,9 +8,9 @@ This wiki is heavily based on the original VotV modding wiki. Unfortunately, the
 ## Contributing
 Any form of contributing is welcomed and greatly appreciated!
 
-🥉 For smaller recommendations or those without experience writing, helpers can help suggest changes or tweaks through direct message, email, or any of the contact methods provided [below](#contact).
+🥉 For smaller recommendations or those without experience writing, helpers can help suggest changes or tweaks through the discord server, discord DM, email, or any of the other contact methods provided [below](#contact).
 
-🥈 For less technically-experienced writers, contributors can write their own pages or test out writing different things using any markdown editor [like this one](https://markdownlivepreview.com/). Any finished pages you've written can be sent to me using my discord or email provided [below](#contact).
+🥈 For writers with less technical experience, contributors can write their own pages or test out writing different things using any markdown editor [like this one](https://markdownlivepreview.com/). Any finished pages you've written can be sent to me using my discord or email provided [below](#contact).
 
 🥇 For more technically experienced users, I would recommend [cloning and running the wiki locally](#running-locally), and submitting their edits through pull requests.
 
