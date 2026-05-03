@@ -126,7 +126,7 @@ const config = {
               },
               {
                 label: 'VotV Archive',
-                href: 'https://archive.votv.zip/',
+                href: 'https://satellite9.com/',
               },
             ],
           },
