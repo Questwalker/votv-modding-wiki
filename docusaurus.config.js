@@ -50,6 +50,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/Questwalker/votv-modding-wiki/tree/main/',
+          exclude: ['./blueprint-modding/modding-with-voidmod/**'],
           // sidebarCollapsed: false
         },
         theme: {
