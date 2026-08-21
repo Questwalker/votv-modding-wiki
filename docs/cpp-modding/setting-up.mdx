@@ -1,0 +1,26 @@
+---
+id: setting-up
+sidebar_position: 1
+description: The next steps in how to create your own C++ mod 
+---
+
+# Setting up
+## Creating your C++ project
+:::warning
+Not for the faint of heart.\
+Developers are encouraged to have experience with C++, development tooling, git, and the command line. Windows is the only officially supported development platform at this time.
+:::
+Setting up your C++ project requires lots of steps, which the UE4SS documentation have a full guide on how to do. That documentation can be found here: [UE4SS Documentation: Creating a C++ mod](https://docs.ue4ss.com/dev/guides/creating-a-c++-mod.html).
+
+Follow those directions to the end to successfully create your own C++ mod and get it successfully running in Voices of the Void.
+
+## Troubleshooting/Additional notes
+Here are some extra things to know to avoid certain errors while setting up your project.
+* If you are planning to create your mod with Visual Studio, I recommend using Visual Studio 2022 (installer [here](https://aka.ms/vs/17/release/vs_community.exe)). This version has all its tooling compatible with creating a mod. Make sure to have the "Desktop development with C++" workload installed, and the correct version of the Windows SDK selected for your version of Windows in the individual components tab.
+* If you are having publickey issues while running git clone/submodule commands, try running the commands inside the git bash where you configured your ssh keys.
+* If you are generating a Visual Studio Solution:
+    * If you are having issues stating such as "No CMAKE_C_COMPILER" and similar, try to [make a basic c++ project](https://learn.microsoft.com/en-us/cpp/windows/walkthrough-creating-a-standard-cpp-program-cpp?view=msvc-170) to make sure Visual Studio has everything loaded and working.
+
+## Running your mod
+To run your new `.dll` file in VotV, you can follow the directions in [the next page](./running-your-mod).
+

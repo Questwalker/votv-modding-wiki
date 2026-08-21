@@ -1,7 +1,7 @@
 ---
 id: running-your-mod
 sidebar_position: 3
-description: How to run your mod for testing
+description: How to run your blueprint mod for testing
 ---
 
 # Running your mod
@@ -34,7 +34,7 @@ Repeatedly copy+pasting the file and renaming it every time you want to test it 
 For example, a batch file on Windows would have a single command that would look like this:
 
 ```
-cp "<patch to your unreal engine's output>/pakchunk##-WindowsNoEditor.pak" "<path to your mod folder>\ExampleMod.pak"
+copy /y "<patch to your unreal engine's output>/pakchunk##-WindowsNoEditor.pak" "<path to your mod folder>\ExampleMod.pak"
 ```
 
 Running this file will copy the file over and rename it, rewriting the old pak file while its at it.
