@@ -1,0 +1,64 @@
+---
+description: How to create a prop using VotV's prop system
+pagination_prev: null
+pagination_next: null
+---
+
+import DocCardList from '@theme/DocCardList';
+
+# Creating Props
+Props is VotV's way of creating and managing objects. By following the prop system, you can implement your own props that have an interaction menu and integrate with the spawn menu, inventories, other props, and more.
+
+**Required prequisites**:
+- You need to be able modify the game's datatables to create props. For this guide, we will be using Fusion to do this. If you don't know anything about it, you can [read about it here](../../using-fusion/).
+- Parts of this guide will require you to have ghostmappings/recreated assets for some of the game's structs, and more importantly, the `prop` object. If you don't know what these are or don't have them installed, [check out this section](../../using-ghostmappings/). If you know how to create your own ghostmappings, then you can create them yourself whenever the guide mentions them.
+
+To start, create a `_list_props` datatable based on `struct_prop`, and then follow the directions below:
+
+If you want to create a prop that just exists in the world, and doesn't particularly have any interactions or special behaviors, [jump to this section](#creating-a-basic-non-functional-prop).
+Otherwise, if you want to create a prop that is its own actor object and is able to run code, have custom interaction actions, and more, [jump to this section](#creating-complex-props).
+
+## Creating a basic prop
+Each row in the datatable represents a prop. To create your prop, add a new row. Then name the row (by pressing F2 or Right-Click -> Rename) the *id name* that you want to give your prop. For example, `my_test_prop`.
+
+Each column is self-explainatory, so you can try out filling some info in and see if it works.
+<details>
+<summary>If you want to know what each column means, here's an explaination:</summary>
+- mesh - The mesh of your prop.
+- displayName - The name of your prop as displayed in most UIs.
+- description - The description of your prop as displayed in the inventory.
+- spawnAsObject - Don't set this (unless you want to create a [complex prop](#creating-a-complex-prop))
+- parseNameToObject - (Unknown, @ me if you know!)
+- category - The section of the sandbox spawn menu that your prop is put into.
+- price - If there does not exist a store entry for this prop, then this number is halved to determine the amount of points gotten from selling the prop.
+- massMultiply - The mass multiplier for the prop (mass determines the weight/physics of the prop). Set it to 1 for it to act normally to other props, lower values make it lighter and higher values make it heavier.
+- achievement_unlock - The id name of an achievement that the player needs to have unlocked for this prop to appear in the sandbox spawn menu. Leave it at "None" to make it always available.
+- craftTag - A value used for crafting recipes that match anything with a specific tag.
+- volumeMultiply - The volume multiplier for the prop (volume determines the amount of space the prop takes up in inventories). Set it to 1 for it to act normally to other props, lower values make it take up less inventory space and higher values make it take up more.
+- heavy - This setting is used by many heavy objects and parts of the world itself (the tower, bridge, etc.). If this is set to true:
+  - Able to be hacksawed
+  - Cannot be put in a container
+  - Does not do CCD detection (allows it to go through walls if moving fast enough)
+  - Uses WorldDynamic collision instead of PhysicsBody
+  - Sets it to cast it big object shadow (in regard to the game's small objects shadow setting)
+- canHold - If this is set to true:
+  - Can be picked up
+  - Can be put in a container
+- canCollect - Allows it to be collected into the inventory.
+- ignoreInteractions - If true, prevents it from being interacted with by the player.
+- spoiler - Decides if the "Show Spoilers" checkbox needs to be checked to appear in the sandbox's spawn menu. 
+</details>
+
+Note that you cannot set the volume of your prop directly. The volume of a prop is calculated automatically based on the size of the prop's mesh (using convex hull), so you can only effect the volume by using the volumeMultiply column.
+
+To create a simple prop, you can import any random 3d model into your project's mod folder, set the row's mesh to that model, set the display name to something, set massMultiply and volumeMultiply to 1, and set canHold to true.\
+Then, package your mod and load it into the game. Open the sandbox's spawn menu, search for your prop's *id name*, and it should just be right there! Spawn it in and throw it around.
+
+## Creating a complex prop
+This is where you can unlock a lot of powerful features. To start, create a new row and fill in the basic information as described in the basic prop instructions.
+
+Next, go to your mod's folder and create a new blueprint class, with the parent being the `prop` actor, and name it whatever you want. Open the new blueprint, and click the "Class Defaults" button at the top. Look for the `Name` variable, **and set it exactly to your prop's id name in the prop datatable**.
+
+Finally, go back to your datatable entry and set the row's `spawnAsObject` value to that blueprint class that you created earlier.
+
+Now your complex prop is completed! Package your mod and load it into the game. Open the sandbox's spawn menu, search for your prop's *id name*, and it should be right there.
