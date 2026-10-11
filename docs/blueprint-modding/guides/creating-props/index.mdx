@@ -21,9 +21,9 @@ Otherwise, if you want to create a prop that is its own actor object and is able
 ## Creating a basic prop
 Each row in the datatable represents a prop. To create your prop, add a new row. Then name the row (by pressing F2 or Right-Click -> Rename) the *id name* that you want to give your prop. For example, `my_test_prop`.
 
-Each column is self-explainatory, so you can try out filling some info in and see if it works.
+Each column is self-explanatory, so you can try out filling some info in and see if it works.
 <details>
-<summary>If you want to know what each column means, here's an explaination:</summary>
+<summary>If you want to know what each column means, here's an explanation:</summary>
 - mesh - The mesh of your prop.
 - displayName - The name of your prop as displayed in most UIs.
 - description - The description of your prop as displayed in the inventory.
@@ -49,8 +49,6 @@ Each column is self-explainatory, so you can try out filling some info in and se
 - spoiler - Decides if the "Show Spoilers" checkbox needs to be checked to appear in the sandbox's spawn menu. 
 </details>
 
-Note that you cannot set the volume of your prop directly. The volume of a prop is calculated automatically based on the size of the prop's mesh (using convex hull), so you can only effect the volume by using the volumeMultiply column.
-
 To create a simple prop, you can import any random 3d model into your project's mod folder, set the row's mesh to that model, set the display name to something, set massMultiply and volumeMultiply to 1, and set canHold to true.\
 Then, package your mod and load it into the game. Open the sandbox's spawn menu, search for your prop's *id name*, and it should just be right there! Spawn it in and throw it around.
 
@@ -62,3 +60,9 @@ Next, go to your mod's folder and create a new blueprint class, with the parent 
 Finally, go back to your datatable entry and set the row's `spawnAsObject` value to that blueprint class that you created earlier.
 
 Now your complex prop is completed! Package your mod and load it into the game. Open the sandbox's spawn menu, search for your prop's *id name*, and it should be right there.
+
+## Extra notes
+- Notice that you cannot set the volume of your prop directly. The volume of a prop is calculated automatically based on the size of the prop's mesh (using convex hull), so you can only effect the volume by using the volumeMultiply column.
+- If you change the mesh of your prop, the image of your prop in the sandbox spawn menu may not change. This is because the game only generates the spawn menu icons if it sees that the list_props datatable has changed size. You can force the game to re-generate icons by clearing out the `%localappdata%\VotV\Assets\icons\items` folder, or by temporarily disabling Fusion, loading the game, and reenabling Fusion again.
+
+<DocCardList/>
