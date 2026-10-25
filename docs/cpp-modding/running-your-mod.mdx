@@ -3,6 +3,8 @@ id: running-your-mod
 sidebar_position: 2
 description: How to run your C++ mod for testing
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Running your mod
 To load your `.dll` files in VotV for testing, you will need to place it into a specific folder so that the modloader can load it.
@@ -12,22 +14,23 @@ The UE4SS's docs also include info on [installing your C++ mod](https://docs.ue4
 ## Locating your mod folder
 You will need to find the location of your installation's `mod` or `Mods` folder. Follow the following directions based on your modding installation.
 
-### In a mod manager
-Go into your mod manager's settings, and search for the button "Browse profile folder". This will open a folder in your file explorer, and from there navigate into the `shimloader` folder, and into the `mod` folder. Then follow the [next steps.](#creating-your-mods-folder)
-
-### In a manual installation
-Go to the location of your download of VotV, then navigate to the `\VotV\Binaries\Win64\ue4ss\Mods` directory. Then follow the [next steps.](#creating-your-mods-folder)
+<Tabs groupId="installing-victorybp">
+<TabItem value="local-install" label="In a mod manager" default>
+Go into your mod manager's settings, and search for the button "Browse profile folder". This will open a folder in your file explorer, and from there navigate into the `shimloader` folder, and into the `mod` folder.
+</TabItem>
+<TabItem value="global-install" label="In a manual installation">
+Go to the location of your download of VotV, then navigate to the `/VotV/Binaries/Win64/ue4ss/Mods` directory.
+</TabItem>
+</Tabs>
 
 ## Creating your mod's folder
-Once you are in your mod folder, you will see some other files and folders such as "BPML_GenericFunctions". Here you will need to create a new folder, and name it the _exact name_ your mod uses.
+Once you are in your mod folder, you will see some other files and folders such as "BPML_GenericFunctions". Here you will need to create a new folder, and give it the name of your mod.
 
-Once you have done that, enter that folder and create a folder named `dlls`, and inside that folder place your dll file. Your dll can be either named `<the name of your mod>.dll`, or just `main.dll`.
+Once you have done that, enter that folder and create a folder named `dlls`, and inside that folder place your dll file and rename it to `main.dll`.
 ```
 📂 mod/Mods
     📁 MyExampleMod
         📁 dll
-            📄 MyExampleMod.dll
-                OR
             📄 main.dll
 ```
 

@@ -1,0 +1,56 @@
+---
+id: creating-your-mod
+sidebar_position: 1
+description: The next steps in how to create your own Lua mod 
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Creating your mod
+Creating a Lua mod is the easiest of all other modding methods and requires pretty much no set up. That being said, it's heavily recommended to use a code editor just to make the process of development easier.
+
+I recommend using Visual Studio (or it's sibling VSCodium) and the Lua extension by Tencent or sumneko. The extension by Tencent is older, but is faster and has less bugs, while the sumneko one is more up to date.
+
+## Where to create your script
+To find the correct location for youur script, you will need to find the location of your installation's `mod` or `Mods` folder. Follow the following directions based on your modding installation.
+
+<Tabs groupId="installing-victorybp">
+<TabItem value="local-install" label="In a mod manager" default>
+Go into your mod manager's settings, and search for the button "Browse profile folder". This will open a folder in your file explorer, and from there navigate into the `shimloader` folder, and into the `mod` folder.
+</TabItem>
+<TabItem value="global-install" label="In a manual installation">
+Go to the location of your download of VotV, then navigate to the `/VotV/Binaries/Win64/ue4ss/Mods` directory.
+</TabItem>
+</Tabs>
+
+## Creating your mod's folder
+Once you are in your mod folder, you will see some other files and folders such as "BPML_GenericFunctions". Create a new folder and give it the name of your mod.
+
+Once you have done that, enter that folder and create a folder named `scripts`, and inside that folder create a new file called `main.lua`. This is your mod's script!
+
+Finally, to enable your mod, you can either:
+* (Recommended) Create a blank `enabled.txt` file in your mod folder (alongside your `scripts` folder). This force-enables the mod.
+* Add a line of text like `<My modname> : 1` to the `mods.txt` file in the base mod folder. Make sure to place your text **before** the `keybinds : 1` line.
+
+```
+📂 mod/Mods
+    📁 MyExampleMod
+        📁 scripts
+            📄 main.lua
+        📄 enabled.txt
+```
+
+## Next steps
+Now that you have your script file, you can start programming your mod. Open it up in your editor and you're ready to start programming. To run your mod, all you have to do is run the game and the script should run automatically.
+
+I heavily recommend checking out [UE4SS's lua modding docs](https://docs.ue4ss.com/dev/lua-api.html) for some extra insight on the API, and also check out the [Palworld modding wiki](https://pwmodding.wiki/) for more examples and in-depth guides on Lua usage.
+
+## Final Notes
+Theres some notable differences and quirks in behaviors that its nice to be aware of:
+* UE4SS provides a bunch of new functions that are available for you to use.
+<!-- * To extend on this, UE4SS overrides the `print()` function with a function that behaves a little differently can the default one. It only accepts one parameter and it must be a string. This can be annoying to work with, so its useful to create a utility function to work around the issue. 
+This seems different on the dev docs now. Has the function implementation changed at some point? -->
+* You can use UE4SS's console GUI to reload mods, allowing you to edit your code and re-run them without having to close and reopen the game. 
+
+
+
