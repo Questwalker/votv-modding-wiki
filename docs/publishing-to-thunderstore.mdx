@@ -33,11 +33,12 @@ The `manifest.json` is a file that contains information about your mod to be inc
 
 | Key            | Description                                                                                                  | Example value                                                                                   |
 | -------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
-| name           | Name of the mod page, with no spaces.<br/>Allowed characters: `a-z A-Z 0-9 _`                                | <pre>"Some_Mod"</pre>                                                                           |
-| description    | A short description of the mod, shown on the mod list. Max 250 characters.                                   | <pre>"Hello world"</pre>                                                                        |
+| name           | Name of the mod page, with no spaces.<br/>Allowed characters: `a-zA-Z0-9_ `                                  | <pre>"Some_Mod"</pre>                                                                           |
+| author         | (Optional) The author(s) of the mod. This field isn't used by Thunderstore, only when manually importing your zip into a mod manager | <pre>"Username"</pre>                                                                        |
+| description    | A short description of the mod, shown on the mod list. Max 250 characters.                                   | <pre>"A mod that does X"</pre>                                                                             |
 | version_number | Version number of the mod, following the [semantic version format](https://semver.org/) `Major.Minor.Patch`  | <pre>"1.3.2"</pre>                                                                              |
-| dependencies   | List of other packages that are required for this package to function.                                       | <pre>[<br/>    "MythicManiac-TestMod-1.1.0",<br/>    "SomeAuthor-SomePackage-1.0.0"<br/>]</pre> |
-| website_url    | URL of the mod's website (e.g. GitHub repo). Can be an empty string.                                         | <pre>"https:<area/>//example.com/"</pre>                                                        |
+| dependencies   | (Optional) List of other packages that are required for this package to function.                            | <pre>[<br/>    "MythicManiac-TestMod-1.1.0",<br/>    "SomeAuthor-SomePackage-1.0.0"<br/>]</pre> |
+| website_url    | (Optional) URL to the mod's website (e.g. GitHub repo). Can be an empty string.                              | <pre>"https:<area/>//example.com/"</pre>                                                        |
 
 For example, a `manifest.json` might look like this:
 ```
