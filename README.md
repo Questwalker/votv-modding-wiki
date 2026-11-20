@@ -30,6 +30,9 @@ Docusaurus is designed to be runnable locally with a webserver that updates live
 2. Download and setup the dependencies for the project by running `npm ci`. Wait until it is done running to continue.
 3. Finally, run `npm start` to start the web server. It should automatically build the website and open a new tab in your browser with the wiki. Any changes you make to the wiki's files should update on that website in real time. Press `Ctrl+C` in the command prompt to shut down the server at any time.
 
+### Notes:
+- When developing with `npm start`, the search may not work or update to include newly created pages. This is normal, because the search index is only created when the site is built with `npm run build`.
+
 ## Contact
 Discord: questwalker (ping me in any channel or DM me)\
 Email: [questwalkerko@gmail.com](mailto:questwalkerko@gmail.com)\
